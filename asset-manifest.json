@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/contentful-cookbook/static/css/main.fd75ec47.chunk.css",
+    "main.js": "/contentful-cookbook/static/js/main.0deeac7c.chunk.js",
+    "main.js.map": "/contentful-cookbook/static/js/main.0deeac7c.chunk.js.map",
+    "runtime-main.js": "/contentful-cookbook/static/js/runtime-main.7df77a1e.js",
+    "runtime-main.js.map": "/contentful-cookbook/static/js/runtime-main.7df77a1e.js.map",
+    "static/js/2.f8ecc632.chunk.js": "/contentful-cookbook/static/js/2.f8ecc632.chunk.js",
+    "static/js/2.f8ecc632.chunk.js.map": "/contentful-cookbook/static/js/2.f8ecc632.chunk.js.map",
+    "static/js/3.b91f88b2.chunk.js": "/contentful-cookbook/static/js/3.b91f88b2.chunk.js",
+    "static/js/3.b91f88b2.chunk.js.map": "/contentful-cookbook/static/js/3.b91f88b2.chunk.js.map",
+    "index.html": "/contentful-cookbook/index.html",
+    "static/css/main.fd75ec47.chunk.css.map": "/contentful-cookbook/static/css/main.fd75ec47.chunk.css.map",
+    "static/js/2.f8ecc632.chunk.js.LICENSE.txt": "/contentful-cookbook/static/js/2.f8ecc632.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7df77a1e.js",
+    "static/js/2.f8ecc632.chunk.js",
+    "static/css/main.fd75ec47.chunk.css",
+    "static/js/main.0deeac7c.chunk.js"
+  ]
+}
