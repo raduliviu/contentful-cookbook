@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/contentful-cookbook/static/css/main.fd75ec47.chunk.css",
-    "main.js": "/contentful-cookbook/static/js/main.0deeac7c.chunk.js",
-    "main.js.map": "/contentful-cookbook/static/js/main.0deeac7c.chunk.js.map",
+    "main.js": "/contentful-cookbook/static/js/main.d664f7d8.chunk.js",
+    "main.js.map": "/contentful-cookbook/static/js/main.d664f7d8.chunk.js.map",
     "runtime-main.js": "/contentful-cookbook/static/js/runtime-main.7df77a1e.js",
     "runtime-main.js.map": "/contentful-cookbook/static/js/runtime-main.7df77a1e.js.map",
     "static/js/2.f8ecc632.chunk.js": "/contentful-cookbook/static/js/2.f8ecc632.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7df77a1e.js",
     "static/js/2.f8ecc632.chunk.js",
     "static/css/main.fd75ec47.chunk.css",
-    "static/js/main.0deeac7c.chunk.js"
+    "static/js/main.d664f7d8.chunk.js"
   ]
 }
