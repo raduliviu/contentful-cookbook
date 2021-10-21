@@ -52,14 +52,22 @@ function Home() {
     return (<>
         {
             recipes.map((recipe) => {
+                let recipeTags = []
+                recipe.contentfulMetadata.tags.forEach(tag => recipeTags.push(tag.name))
                 return (
                     <div className="recipeCard" key={recipe.sys.id}>
                         <NavLink to={`/recipe/${recipe.sys.id}`}>
+                            <img src={recipe.picture.url} alt={recipe.name} />
                             <h3>{recipe.name}</h3>
-                            <img src={recipe.picture.url} alt={recipe.name}/>
-                            <span>Course:</span><p>{recipe.course}</p>
-                            <span>Tags:</span>
-                            {recipe.contentfulMetadata.tags.map((tag, i) => <p key={recipe.name + tag + i}>{tag.name}</p>)}
+                            <div className="recipeField recipeCourse">
+                                <span>Course: </span><span>{recipe.course}</span>
+                            </div>
+                            <div className="recipeField recipeTags">
+                                <span>Tags: </span>
+                                {
+                                    <span>{recipeTags.join(', ')}</span>
+                                }
+                            </div>
                         </NavLink>
                     </div>
                 )

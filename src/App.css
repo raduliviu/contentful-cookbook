@@ -11,12 +11,12 @@ img {
 }
 
 a, a:visited {
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
 }
 
 a:hover {
-  color: #264653;
+  color: hotpink;
 }
 
 .recipeCard, .recipePage {
@@ -27,4 +27,9 @@ a:hover {
 .recipeCard:hover {
   cursor: pointer;
   background-color: #E9C46A;
+}
+
+.recipeField {
+  padding: 1rem;
+  box-sizing: border-box;
 }

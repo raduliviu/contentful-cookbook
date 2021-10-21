@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 function Recipe() {
     const spaceId = process.env.REACT_APP_DEV_CONTENTFUL_SPACE_ID
@@ -12,7 +13,7 @@ function Recipe() {
             picture {
                 url
             },
-            instructions,
+            instructions {json},
             ingredients {json},
             contentfulMetadata {tags
                 {name}
@@ -49,22 +50,32 @@ function Recipe() {
     if (!recipe) {
         return "Loading...";
     }
-    const ingredientsList = recipe.ingredients.json.content[0].content
+
+    let recipeTags = []
+    recipe.contentfulMetadata.tags.forEach(tag => recipeTags.push(tag.name))
+    console.log(recipeTags)
+
     return (
         <div className="recipePage">
-            <h3>{recipe.name}</h3>
-            <img src={recipe.picture.url} alt={recipe.name}/>
-            <span>Course:</span><p>{recipe.course}</p>
-            <span>Tags:</span>
-            {recipe.contentfulMetadata.tags.map((tag, i) => <p key={recipe.name + tag + i}>{tag.name}</p>)}
-            <span>Ingredients:</span>
-            {
-                ingredientsList.map((ingredient, i) => {
-                    return (<p key={recipe.name + ingredient + i}>{ingredient.content[0].content[0].value}</p>)
-                })
-            }
-            <span>Instructions:</span>
-            <p>{recipe.instructions}</p>
+            <img src={recipe.picture.url} alt={recipe.name} />
+            <h2>{recipe.name}</h2>
+            <div className="recipeField recipeTags">
+                <span>Tags: </span>
+                {
+                    <span>{recipeTags.join(', ')}</span>
+                }
+            </div>
+            <div className="recipeField recipeIngredients">
+                <h4>Ingredients:</h4>
+                {documentToReactComponents(recipe.ingredients.json)}
+            </div>
+            <div className="recipeField recipeInstructions">
+                <h4>Instructions:</h4>
+                {documentToReactComponents(recipe.instructions.json)}
+            </div>
+            <div className="recipeField recipeCourse">
+                <span>Course: </span><span>{recipe.course}</span>
+            </div>
         </div>
     )
 }
